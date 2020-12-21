@@ -41,7 +41,6 @@ class TitleFragment : Fragment() {
 //            //Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
 //            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
 //        }
-
         return binding.root
     }
     // TODO (06) Add the Title Fragment to the Navigation Graph
