@@ -22,6 +22,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
@@ -32,6 +34,14 @@ class TitleFragment : Fragment() {
         // TODO (09) Call binding.playButton.setOnClickListener and navigate to the gameFragment
         // Use Navigation.createNavigateOnClickListener with
         // R.id.action_titleFragment_to_gameFragment
+        binding.playButton.setOnClickListener (
+                Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
+        )
+//        { view: View ->
+//            //Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
+//            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+//        }
+
         return binding.root
     }
     // TODO (06) Add the Title Fragment to the Navigation Graph
